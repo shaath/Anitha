@@ -1,0 +1,19 @@
+package com.NewProject.tests;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.Properties;
+
+public class Businessmethods 
+{
+	public static FileInputStream fi;
+	public static Properties pr;
+	
+	public void tt() throws FileNotFoundException
+	{
+		fi=new FileInputStream("E:\\Test\\NewProject\\src\\com\\NewProject\\config\\config.properties");
+		pr=new Properties();
+		pr.load(fi);
+	}
+
+}

@@ -1,0 +1,48 @@
+package com.CodedUit.businessmethods;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+
+public class BusinessMethods 
+{
+	public WebDriver driver=null;
+	public String CodedUit_Launch(String url)
+	{
+		System.setProperty("webdriver.chrome.driver", "E:\\Test\\CodeUit\\src\\bin\\chromedriver.exe");
+		driver=new ChromeDriver();
+		driver.get(url);
+		driver.manage().window().maximize();
+		WebDriverWait wait=new WebDriverWait(driver, 60);
+		WebElement signin=driver.findElement(By.xpath("//a[@ui-sref='app.login']"));
+		if (signin.isDisplayed())
+		{
+			return "Pass";
+		}
+		else
+		{
+			return "Fail";
+		}
+	}
+	
+	public String CodedUit_Login(String un,String pwd)
+	{
+		driver.findElement(By.xpath("//a[@ui-sref='app.login']")).click();
+		driver.findElement(By.xpath("//input[@placeholder='Email']")).sendKeys(un);
+		driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys(pwd);
+		driver.findElement(By.xpath("//button[text()='Sign in']")).click();
+		
+		WebElement username=driver.findElement(By.xpath("//a[@ui-sref='app.settings']"));
+		if (username.isDisplayed())
+		{
+			return "Pass";
+		}
+		else
+		{
+			return "Fail";
+		}
+	}
+}

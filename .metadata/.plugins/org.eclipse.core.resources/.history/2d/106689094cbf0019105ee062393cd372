@@ -1,0 +1,23 @@
+package com.CodedUit.Tests;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import com.CodedUit.businessmethods.BusinessMethods;
+
+public class LoginTest 
+{
+	public static void main(String[] args) {
+		LoginTest lt=new LoginTest();
+		String res=BusinessMethods.CodedUit_Launch("http://angularjs.realworld.io/#/");
+		System.out.println(res);
+	}
+	
+	
+	public String CodedUit_Login()
+	{
+		
+	}
+}

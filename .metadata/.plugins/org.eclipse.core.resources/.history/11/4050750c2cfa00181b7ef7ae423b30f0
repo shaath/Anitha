@@ -1,0 +1,10 @@
+package com.NewProject.tests;
+
+public class SampleTests extends Businessmethods
+{
+	public static void main(String[] args) 
+	{
+		pr.getProperty("FilePath")
+	}
+
+}

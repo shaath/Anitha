@@ -1,0 +1,11 @@
+package com.NewProject.tests;
+
+public class SampleTests 
+{
+	public static void main(String[] args) {
+		Businessmethods m=new Businessmethods();
+		
+		pr.
+	}
+
+}

@@ -1,0 +1,9 @@
+package com.NewProject.tests;
+
+import java.io.FileInputStream;
+
+public class Businessmethods 
+{
+	public static FileInputStream fi;
+
+}

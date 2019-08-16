@@ -1,0 +1,27 @@
+package com.CodedUit.businessmethods;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class BusinessMethods 
+{
+	public WebDriver driver=null;
+	public String CodedUit_Launch(String url)
+	{
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Dell\\Desktop\\chromedriver.exe");
+		driver=new ChromeDriver();
+		driver.get(url);
+		driver.manage().window().maximize();
+		WebElement signin=driver.findElement(By.xpath("//a[@ui-sref='app.login']"));
+		if (signin.isDisplayed())
+		{
+			return "Pass";
+		}
+		else
+		{
+			return "Fail";
+		}
+	}
+}

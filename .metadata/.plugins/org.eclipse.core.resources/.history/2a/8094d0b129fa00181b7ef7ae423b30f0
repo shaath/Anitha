@@ -1,0 +1,11 @@
+package com.NewProject.tests;
+
+import java.io.FileInputStream;
+import java.util.Properties;
+
+public class Businessmethods 
+{
+	public static FileInputStream fi;
+	public static Properties;
+
+}
